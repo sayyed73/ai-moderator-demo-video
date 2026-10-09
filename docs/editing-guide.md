@@ -31,11 +31,13 @@ Put an image (SVG/PNG/JPG) in `public/images/` and change `products.hoodie.image
 ## Scene duration
 `src/config/timing.ts` → `sceneSeconds`. Start frames and total length are derived. Events inside a scene (message timing, cursor clicks…) are in seconds *relative to that scene* in the `e` object below it; if you shorten a scene, move its events earlier so they stay inside it.
 
-## Add narration
-1. Record or generate your own narration (script: `docs/voiceover-script.md`); save it as `public/audio/voiceover.mp3`.
-2. `src/config/audio.ts` → `voiceover.enabled: true` (adjust `volume`, `startAtSeconds`).
+## Sound: music, effects and narration
+Music and soft UI sound effects are **on by default** (`src/config/audio.ts`). They are original, synthesised by `scripts/make-audio.py` (no licences, no network). Re-run `python3 scripts/make-audio.py` after editing its tempo/chords. Switch layers with `enabled`, adjust `volume`, or drop in your own `public/audio/music.mp3`. Sound effects are placed from `timing.ts` events (see `src/components/SfxLayer.tsx`), so they follow scene timing changes.
+
+### Add narration
+1. Record or generate narration with a tool you are licensed to use (script: `docs/voiceover-script.md`). Free option on a Mac: `say -v Samantha -f narration.txt -o narration.aiff && ffmpeg -i narration.aiff public/audio/voiceover.mp3`. Or record yourself.
+2. Save it as `public/audio/voiceover.mp3` and set `voiceover.enabled: true` in `src/config/audio.ts` (adjust `volume`, `startAtSeconds`). Lower `music.volume` to about 0.15 so it never covers the voice.
 3. Check the preview. If the recording is longer or shorter than a scene, edit `sceneSeconds` and the scene's event times in `timing.ts`. Total length = sum of the seven scene lengths.
-4. Optional music: same way with `music` (keep volume low).
 If an enabled file is missing it is skipped, so rendering never fails because of audio.
 
 ## Preview and render again

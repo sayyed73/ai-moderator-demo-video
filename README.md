@@ -30,7 +30,7 @@ npm run dev        # opens the Remotion preview (Studio) in your browser
 | Customer names, chat messages, product, prices, stock, order, counts | `src/data/demo.ts` |
 | Scene lengths, when things happen inside a scene | `src/config/timing.ts` |
 | Size, fps, locale, currency formatting, safe margins | `src/config/video.ts` |
-| Voiceover / music | `src/config/audio.ts` |
+| Music, sound effects, voiceover | `src/config/audio.ts` |
 
 Full step-by-step instructions: [`docs/editing-guide.md`](docs/editing-guide.md). Other docs: [`docs/storyboard.md`](docs/storyboard.md), [`docs/voiceover-script.md`](docs/voiceover-script.md), [`docs/github-setup.md`](docs/github-setup.md).
 
@@ -55,4 +55,4 @@ references/        local-only reference material (git-ignored)
 - **`Composition not found`** – you changed `id` in `src/config/video.ts`; update the ID in the scripts in `package.json` too.
 - **Render is slow / runs out of memory** – use `npm run render -- --concurrency=2`.
 - **Text clipped after editing copy** – shorten the text or reduce font size in the component; check several frames in the preview.
-- **Voiceover not heard** – set `enabled: true` in `src/config/audio.ts` and make sure the file exists in `public/audio/`.
+- **Sound missing** – check `enabled` flags in `src/config/audio.ts` and that the files exist in `public/audio/`. Audio plays in `npm run dev` after you press play (browsers block autoplay).
