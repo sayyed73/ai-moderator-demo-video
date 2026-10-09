@@ -1,0 +1,16 @@
+node_modules/
+out/
+references/
+*.log
+.cache/
+.tmp/
+tmp/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+dist/
+build/
+.remotion/

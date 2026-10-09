@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Original illustration: navy everyday hoodie -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B3E66"/><stop offset="1" stop-color="#1D2C4D"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="200" cy="364" rx="130" ry="12" fill="#18201E" opacity="0.10"/>
+  <!-- sleeves -->
+  <path d="M110 108 52 160 28 300c-2 14 8 22 20 22h30l22-150z" fill="url(#g)"/>
+  <path d="M290 108l58 52 24 140c2 14-8 22-20 22h-30l-22-150z" fill="url(#g)"/>
+  <!-- body -->
+  <path d="M110 108c30-14 60-20 90-20s60 6 90 20l-8 232c0 8-6 14-14 14H132c-8 0-14-6-14-14z" fill="url(#g)"/>
+  <!-- hood -->
+  <path d="M138 96c8-34 34-56 62-56s54 22 62 56c-18 22-42 34-62 34s-44-12-62-34z" fill="#34497A"/>
+  <path d="M162 100c8-22 22-34 38-34s30 12 38 34c-14 14-26 20-38 20s-24-6-38-20z" fill="#14203B"/>
+  <!-- drawstrings -->
+  <path d="M184 128v44" stroke="#EDE7DA" stroke-width="5" stroke-linecap="round"/>
+  <path d="M216 128v50" stroke="#EDE7DA" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="184" cy="176" r="4.5" fill="#EDE7DA"/><circle cx="216" cy="182" r="4.5" fill="#EDE7DA"/>
+  <!-- pocket -->
+  <path d="M138 262h124l12 52H126z" fill="#1A2845"/>
+  <path d="M146 266h108" stroke="#2B3E66" stroke-width="3" stroke-linecap="round"/>
+  <!-- cuffs and hem -->
+  <rect x="124" y="334" width="152" height="16" rx="6" fill="#14203B"/>
+  <rect x="40" y="306" width="48" height="16" rx="6" transform="rotate(-6 64 314)" fill="#14203B"/>
+  <rect x="312" y="306" width="48" height="16" rx="6" transform="rotate(6 336 314)" fill="#14203B"/>
+</svg>
