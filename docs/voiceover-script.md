@@ -21,7 +21,7 @@ Some requests need a person. When a customer asks for an exception, you're alert
 And a clear overview shows every conversation, who's handling it, and which orders are approved.
 
 **7 · Closing (56–60 s)**
-InboxPilot: AI-assisted conversations, human-controlled orders. More time for your business. This is a product concept.
+More time for your business. InboxPilot, a product concept.
 
 ## Fitting a real recording
 1. Save as `public/audio/voiceover.mp3`, set `voiceover.enabled: true` in `src/config/audio.ts`.
