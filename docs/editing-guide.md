@@ -36,6 +36,7 @@ Music and soft UI sound effects are **on by default** (`src/config/audio.ts`). T
 
 ### Add narration
 1. Record or generate narration with a tool you are licensed to use (script: `docs/voiceover-script.md`). Free option on a Mac: `say -v Samantha -f narration.txt -o narration.aiff && ffmpeg -i narration.aiff public/audio/voiceover.mp3`. Or record yourself.
+1b. **Free, natural-sounding option (Kokoro):** on your own computer follow the setup at the top of `scripts/make-voiceover.py`, then run `python3 scripts/make-voiceover.py`. It reads `docs/voiceover-script.md`, places each scene's narration at its scene start and writes `public/audio/voiceover.mp3`. Try other voices with `--voice` and pacing with `--speed`.
 2. Save it as `public/audio/voiceover.mp3` and set `voiceover.enabled: true` in `src/config/audio.ts` (adjust `volume`, `startAtSeconds`). Lower `music.volume` to about 0.15 so it never covers the voice.
 3. Check the preview. If the recording is longer or shorter than a scene, edit `sceneSeconds` and the scene's event times in `timing.ts`. Total length = sum of the seven scene lengths.
 If an enabled file is missing it is skipped, so rendering never fails because of audio.
